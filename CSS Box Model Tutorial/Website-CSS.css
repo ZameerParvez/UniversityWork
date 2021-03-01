@@ -1,0 +1,142 @@
+/*Colour the background*/
+body {
+  background-color: #CCC7BD;
+}
+/*Colour the background of the Content and set default text and font sizes*/
+#page {
+  background-color: #ffffff;
+  min-width: 450px;
+  max-width: 960px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+/*Align images to the center pf the page*/
+.Image, .Video {
+  font-size: 15px;
+  text-align: center;
+}
+/*Change font size and align text to center*/
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
+/*Change font size and align text to center*/
+h2 {
+  font-size: 35px;
+  text-align: center;
+}
+/*Add extra padding to p tags*/
+p {
+  padding: 10px;
+}
+/*Start of menu*/
+#menu {
+  background-color: #575E36;
+}
+/*Remove bullet points and indentation*/
+#menu ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+/*Display all list entries on a single line*/
+#menu li {
+  margin: auto;
+  display: inline-block;
+}
+/*Align text in the buttons to the center*/
+#menu li a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+/*Make the buttons change to a lighter colour when hovered over*/
+#menu ul li a:hover {
+  background-color: #99A55F;
+}
+/*End of menu*/
+
+/*Start of Resizable box Model*/
+/*Set the boxes and keys colours and borders to the same settings*/
+.MarginBox {
+  background-color: #99A55F;
+  border-style: solid;
+  border-color: #000000;
+  border-width: thin;
+}
+
+.BorderBox {
+  background-color: #DB4F23;
+  border-style: solid;
+  border-color: #000000;
+  border-width: thin;
+}
+
+.PaddingBox {
+  background-color: #77A3DA;
+  border-style: solid;
+  border-color: #000000;
+  border-width: thin;
+}
+
+.ContentBox {
+  background-color: #FAF1C4;
+  border-style: solid;
+  border-color: #000000;
+  border-width: thin;
+}
+/*Initialise the boxes sizes to 20px*/
+#marginBox {
+  margin: 20px;
+  padding: 20px;
+}
+
+#borderBox {
+  padding: 20px;
+  margin: 0px;
+}
+
+#paddingBox {
+  padding: 20px;
+  margin: 0px;
+  align-content: center;
+}
+
+#contentBox {
+  margin: 0px;
+  height: auto;
+  min-width: 99.3%;
+  max-width: 99.3%;
+}
+/*Remove the bullet points and indentation from the list of inputs*/
+#Key>ul {
+  list-style-type: none;
+  padding: 0px;
+}
+/*Set the length of the input text box to the same as the output text box*/
+#contentText {
+  min-width: 99.5%;
+  max-width: 99.5%;
+}
+/*Align text in the keys to the vertical center of their boxes*/
+#Key>ul>li {
+  padding: 5px;
+  margin: 1px;
+  align-self: center;
+}
+/*End of Resizable box model*/
+/*Align resources to the center*/
+#resources {
+  text-align: center;
+}
+/*Remove bullet points and indentation from the resources list*/
+#resources>div>ul {
+  list-style-type: none;
+  padding: 0px;
+}

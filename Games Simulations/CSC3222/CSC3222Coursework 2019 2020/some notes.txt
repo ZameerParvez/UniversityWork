@@ -1,0 +1,25 @@
+- collision detection is present
+    - it hasn't been applied to tiles yet but the class and methods to add them to tiles has been implemented
+        - there are 3 types of tiles
+            - dampening
+            - impassable
+            - interactive
+
+    - There is a bug where multiple robots are colliding with eachother when they should'nt
+        - I think it might be because an object isn't being refernenced correctly
+
+- Some extra map info is being stored
+    - the building locations and their "doors"
+    - the robot spawn tiles
+    - player spawn tiles
+        - any door infront of a red house
+
+- character animations are fixed so that they stay in the direction you face
+
+- the physics is using a fixed time step
+
+- there are functions to tell what type of object te rigid body is
+
+- collision volumes can reference a vvector of other collision volumes
+    - this is so collision detection can be extended to heirarchical collisions
+    

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="Website-CSS.css" />
+  <script type="text/javascript" src="Website-JS.js"></script>
+</head>
+<body onload="clearAllBut(intro);">
+    <div id="page">
+    <h1>Tutorial</h1>
+    <div id="menu">
+      <ul>
+        <li><a href="#intro" onclick="clearAllBut(intro);">Introduction</a></li>
+        <li><a href="#css" onclick="clearAllBut(css);">CSS</a></li>
+        <li><a href="#box" onclick="clearAllBut(box);">Box Model</a></li>
+        <li><a href="#dom" onclick="clearAllBut(dom);">DOM</a></li>
+        <li><a href="#js" onclick="clearAllBut(js);">Js</a></li>
+        <li><a href="#diyBox" onclick="clearAllBut(diyBox);">DIY Box</a></li>
+        <li><a href="#resources" onclick="clearAllBut(resources);">Resources</a></li>
+        <li><a href="#quiz" onclick="clearAllBut(quiz);">Quiz</a></li>
+      </ul>
+    </div>
+
+    <div id="intro" class="Content">
+      <h2>CSS and JavaScript</h2>
+      <p>Hello,<br/>this tutorial website will give you a brief introduction to concepts in CSS and JavaScript, such as the box model and the DOM. For each section there are also links to other sites which cover everything in much more detail.</p>
+    </div>
+
+    <div id="css" class="Content">
+      <h2>A Brief History of CSS</h2>
+      <p>CSS stands for Cascading Style sheets.</p>
+      <p>It allows pages written in mark-up languages, such as HTML, to be styled. One of its main purposes is to separate presentation and content, it also has the advantage that many pages can be styled the same way by linking to the same style sheet, and another adventage which is that a single page can be styled by many style sheets (which is what makes it “cascading”).</p>
+      <p>This separation is known as separation of concerns and makes changing content or presentation much easier in the lifetime of a HTML document, and it also makes it easier to make the page more accessible, by having clean mark-up.</p>
+      <p>The newest CSS version is CSS 3 and is split into modules which add more functionality. CSS 3 is also a superset of CSS 2.1, so it is also backwards compatible.</p>
+      <p>CSS 2.1 was a revision over CSS 2, which fixed a few issues as well as removing and adding some features.</p>
+      <p>CSS 2 and CSS 1 allowed the authors of pages to style their own pages rather than the browsers forcing their style. At this point in time there were many competing methods of styling.</p>
+      <p>More about the history of CSS can be found <a href="https://www.w3.org/Style/LieBos2e/history/Overview.html">here</a>.</p>
+    </div>
+
+    <div id="box" class="Content">
+      <h2>The Box Model</h2>
+      <p>The Box Model is how html content is separated.</p>
+      <p>Every HTML tag creates a box which is made of a margin, border, padding and the content.</p>
+      <div id="boxImage" class="Image">
+        <a href="https://www.w3.org/TR/CSS2/box.html">
+          <img src="https://www.w3.org/TR/CSS2/images/boxdim.png" alt="Image showing the four layers of the box model, the margin, border, padding and content."/>
+        </a>
+        <p>Illustration of the box model by <a href="https://www.w3.org/">W3C</a>.<br/>For more information click on the image.</p>
+      </div>
+      <p>The size of each of those values can be modified, to make the box bigger and smaller, and each side of the box can be modified separately, for example to change the size of the top margin you could use “margin-top: X px;”, where “X” is a positive number.</p>
+      <p>Some older browsers measure the sizes of boxes differently, for example IE8- included padding and border in the width property of boxes.</p>
+      <p>Below is an interactive Box-model which you can change the sizes of the margin, border and padding, you can also change the text in the content level of the box.</p>
+      <div id="boxModel">
+        <div id="marginBox" class="MarginBox" draggable="true">
+          <div id="borderBox" class="BorderBox" draggable="true">
+            <div id="paddingBox" class="PaddingBox" draggable="true">
+              <textarea id="contentBox" class="ContentBox" disabled draggable="true">
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div id="Key">
+          <ul>
+            <li class="MarginBox">Margin <input oninput="changeSize(marginBox, marginSize);" type="number" value="20" min="0" max="60" name="marginSize" id="marginSize"/> px</li>
+            <li class="BorderBox">Border <input oninput="changeSize(borderBox, borderSize);" type="number" value="20" min="0" max="60" name="borderSize" id="borderSize"/> px</li>
+            <li class="PaddingBox">Padding <input oninput="changeSize(paddingBox, paddingSize);" type="number" value="20" min="0" max="60" name="paddingSize" id="paddingSize"/> px</li>
+            <li class="ContentBox">Content<br/><textarea oninput="changeText(contentBox, contentText);" rows="3" name="contentText" id="contentText"></textarea></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="dom" class="Content">
+      <h2>The DOM</h2>
+      <p>The DOM is a W3C standard for accessing documents, which consists of 3 different parts, the Core, XML and HTML DOMs.</p>
+      <p>The HTML DOM is the structure of the html page, it stands for Document Object Model.</p>
+      <div id="domImage" class="Image">
+        <a href="https://en.wikipedia.org/wiki/Document_Object_Model">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/428px-DOM-model.svg.png" alt="The HTML Document Object Model tree.">
+        </a>
+        <p>Illustration by <a href="https://en.wikipedia.org/wiki/Document_Object_Model">Wikipedia</a>.</p>
+      </div>
+      <p>When a page is loaded, the browser creates a tree of elements, which are all the html tags you use, these elements also have attributes, values and styles, which are all underneath their elements in the tree.</p>
+      <p>JavaScript can be used to access anything on the DOM tree, so you can change anything on the tree or add more elements to the tree with scripts. A method of accessing an element with JavaScript is Document.getElementById(“Elements ID”), there are also other methods such as finding an object by class name and tag name.</p>
+      <p>More detail about the DOM can be found <a href="https://www.w3.org/DOM/">here</a>.</p>
+    </div>
+
+    <div id="js" class="Content">
+      <h2>JavaScript is Evolving!</h2>
+      <p>JavaScript is a programming language which is usually used for client side scripting, so that web pages can be more interactive. It has also been standardised in the ECMAScript language specification, most browsers support ECMAScript 5 and a few support the newer ECMAScript 6, which adds new features, such as being able to declare constants.</p>
+      <p>For a list of all added features to ECMAScript 6 click <a href="http://es6-features.org/">here</a>.</p>
+      <div class="Video">
+        <iframe width="430" height="240" src="https://www.youtube.com/embed/WiCxfWh-3y4" allowfullscreen></iframe>
+        <p>This Video by <a href="https://www.youtube.com/channel/UCztRO4rG71uxuR-Tpf_biww">Front End TV</a>, <br/>is an introduction to EcmaScript 6.</p>
+      </div>
+      <p>If you want to use the features in ECMAScript 6, to make your code more compatible, you can transpile your code to ECMAScript 5 using a tool called <a href="https://babeljs.io/">Babel</a>, although there are a few features of ECMAScript 6 that cannot be used. A transpiler is software which compiles the source code of a language into the source code of another language, which will still perform the same task.</p>
+      <p>For a list of features with Babel compatibility information click <a href="https://babeljs.io/learn-es2015/">here</a>.</p>
+    </div>
+
+    <div id="diyBox" class="Content">
+      <h2>DIY Box Model</h2>
+      <p>The files for the box model can be downloaded <a href="BoxModel.zip">here</a>.</p>
+      <p>The layers of the box are made by nesting “div” tags within each other, this is necessary because for demonstration purposes the layers of the box need to be coloured, which cannot usually be done to the margin.</p>
+      <p>There is also a key so that the matching colour tell you which layer is which, and so that the inputs can change their respective coloured boxes size. These inputs are also limited to prevent negative numbers and to keep the box model reasonably sized.</p>
+      <p>The inputs call functions in the JavaScript file, which modify the CSS to increase and decrease the padding sizes of the boxes which represent the layers of the box model.</p>
+      <p>The CSS for the box model first removes all margins from the layers, and sets the page’s margins to auto, so that all content is contained in the centre of the page, it also matches the colours of the boxes and the key. The padding is also what determines the size of the boxes, so the CSS file also initialises them to a size of 20px.</p>
+      <p>The JavaScript for this is ECMAScript 5 code which has been transpiled from ECMAScript 6, with Babel. The file also contains the original source code, which has been commented out, and if you compare it to the ECMAScript 5 code you can see a few differences, such as the use of “const” and the arrow functions in the original, which have advantages over functions and “var”, although it makes no difference here.</p>
+    </div>
+<!-- Add a quiz with backend marking in the future -->
+    <div id="quiz" class="Content">
+      <p>To Do</p>
+    </div>
+
+    <div id="resources" class="Content">
+      <h2>Resources</h2>
+        <div class="general">
+          <h3>General</h3>
+          <ul>
+            <li><a href="https://www.w3schools.com">W3Schools</a></li>
+            <li><a href="https://www.w3.org/">W3C</a></li>
+          </ul>
+        </div>
+        <div class="CSS">
+          <h3>CSS</h3>
+          <ul>
+            <li><a href="https://www.w3.org/Style/LieBos2e/history/Overview.html">The CSS Saga</a></li>
+            <li><a href="https://www.w3schools.com/css/css_intro.asp">CSS Introduction</a></li>
+            <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></li>
+            <li><a href="https://www.w3.org/TR/CSS2/box.html">The Detailed Box Model</a></li>
+          </ul>
+        </div>
+        <div class="JS">
+          <h3>JavaScript</h3>
+          <ul>
+            <li><a href="https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/introduction.html#DOMArchitecture">The detailed DOM</a></li>
+            <li><a href="https://www.w3schools.com/js/js_htmldom.asp">DOM Introduction</a></li>
+            <li><a href="https://babeljs.io/">Babel</a></li>
+            <li><a href="http://es6-features.org/">ECMAScript 6 features</a></li>
+            <li><a href="https://babeljs.io/learn-es2015/ ">Babel compatible features</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
